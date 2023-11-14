@@ -1,0 +1,361 @@
+/* подключение локальный шрифтов на страницу */
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url(fonts/AnonymousPro-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url(fonts/AnonymousPro-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+    display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* сброс стилей по умолчанию */
+body,h1,h2,h3,p,ul,li {
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* задание шрифта всей странице */
+body {
+    font-family: "Anonymous Pro", sans-serif;
+}
+
+/* стили для главного контейнера */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F1F1F1;
+}
+
+/* стили для хедера(шапки) сайта */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #A1A6B4;
+    background: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    margin: 24px 0 24px;
+}
+
+.logo-link {
+    max-width: 215px;
+}
+
+/* стили для ссылок в хедере и футере */
+nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.nav-item {
+    display: inline;
+}
+
+.nav-link {
+    color: #121723;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* стили для  */
+.content {
+    margin: 32px 0;
+    max-width: 1140px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+/* стили для контейнера кроссовок */
+.sneakers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 32px 0 0;
+}
+
+/* стили для карточки кроссовок */
+.sneaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 364px;
+    height: 100%;
+    border-radius: 12px;
+    background: white;
+    color: black
+    
+}
+
+
+
+.sneaker:nth-child(-n+3):hover{
+    
+        transform: translateY(-15px)
+    
+}
+
+
+.sneaker-image {
+    width: 100%;
+}
+
+.sneaker-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 32px 24px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+p {
+    font-size: 20px;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #121723;
+}
+
+/* стили для футера */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    margin: 32px 0;
+}
+
+.footer__logo-link {
+    max-width: 300px;
+    width: 100%;
+}
+
+footer .nav-link {
+    color: white;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1140px;
+    border-top: 1px solid #A1A6B4;
+}
+
+.copyright-text {
+    color: #A1A6B4;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 24px 0;
+}
+
+/* Доп страницы */
+
+.main_card{
+    min-height: 1700px;
+    max-width: 1140px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 50px;
+    margin: 32px 0;
+    
+}
+
+.main_card .main_img img{
+    display: block;
+    width: 100%;
+
+}
+
+.main_card h2{
+    color: var(--black, #121723);
+    font-family: Anonymous Pro;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+
+.main_card h3{
+    color: var(--black, #121723);
+    font-family: Anonymous Pro;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 24px;
+}
+
+.main_card .text{
+    display: flex;
+    align-items:start;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.main_card .text .text_description{
+    color: var(--black, #121723);
+    font-family: Anonymous Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+    margin-top: 24px;
+    width: 506px;
+}
+
+.main_card .text .text_info table{
+    color: var(--black, #121723);
+    font-family: Anonymous Pro;
+    font-size: 20px;
+    font-weight: 400;
+    width: 506px;
+    height: 258px;
+}
+
+.main_card .text .text_info table span{
+    font-size: 30px;
+}
+.main_card .text .text_info table td.line::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 506px;
+    background-color:black;
+    display: block;
+    margin-top: 2%;
+
+}
+
+/* Медиа запросы */
+
+@media (max-width: 575px){
+    header{
+        min-height: 156px;
+    }
+
+    .header-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .header-container .nav-list{
+        margin-top: 24px;
+    }
+
+    .sneakers{
+        justify-content: center;
+    }
+    .sneaker{
+        width: 343px;
+    }
+    
+    .content h1{
+        font-size: 32px;
+        font-weight: 700;
+        padding: 0 16px;
+    }
+
+    footer{
+        min-height: 195px;
+        
+    }
+
+    .footer-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+
+    .footer-content .nav-list{
+        margin-top: 32px;
+    }
+
+    .main_card{
+        min-height: 1544px;
+        max-width: 343px;
+        border-radius: 12px;
+        padding: 24px;
+    }
+
+    .main_card .main_img{
+        width: 100%;
+    }
+    
+    .main_card h2{
+        font-size: 32px;
+    }
+
+    .main_card h3{
+        font-size: 20px;
+    }
+
+    .main_card .text{
+        flex-direction: column;
+
+    }
+
+    .main_card .text .text_description{
+        width: 295px;
+        font-size: 16px;
+    }
+    .main_card .text .text_info table{
+        width: 295px;
+        height: 240px;
+        font-size: 16px;
+
+    }
+    .main_card .text .text_info table span{
+        font-size: 24px;
+
+    }
+    .main_card .text .text_info table td.line::after{
+        width: 295px;
+    }
+}
+
